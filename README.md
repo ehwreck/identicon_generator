@@ -1,6 +1,6 @@
 # IdenticonGenerator
 
-This project generated identicons that could be used in the absence of profile pictures for your application.
+This project generates identicons that could be used in the absence of profile pictures for your application.
 
 ## Installation
 
