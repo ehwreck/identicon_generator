@@ -7,7 +7,10 @@ defmodule IdenticonGenerator.MixProject do
       version: "0.1.0",
       elixir: "~> 1.14",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      description: "A CLI application that generates GitHub-like Identicons.",
+      package: package(),
+      deps: deps(),
+      source_url: "https://github.com/ehwreck/identicon_generator"
     ]
   end
 
@@ -21,8 +24,16 @@ defmodule IdenticonGenerator.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      # add :egd as a dependency by removing the # and running mix deps.get
+      # {:egd, github: "erlang/egd"},
+      {:ex_doc, "~> 0.12"}
+    ]
+  end
+
+  defp package do
+    [
+      licenses: ["GPL-3.0-only"],
+      links: %{"GitHub" => "https://github.com/ehwreck/identicon_generator"}
     ]
   end
 end
